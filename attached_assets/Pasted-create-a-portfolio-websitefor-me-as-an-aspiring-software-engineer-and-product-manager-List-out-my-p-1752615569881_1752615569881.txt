@@ -1,0 +1,66 @@
+create a portfolio websitefor me as an aspiring software engineer and product manager. List out my projects in a creative way such as:
+
+BevoPlace:
+BevoPlace- AI-Powered Marketplace							            January 2025 - April 2025
+Integrated an AI-based recommendation system to personalize product suggestions using user behavior and preference data.
+Added a Natural Language Processing (NLP) feature to improve filtering accuracy and user experience using custom-trained ML models on Firebase functions.
+Implemented chatbot-assisted listings that help users auto-generate item descriptions using on-device Core ML + Firebase-hosted Large Language Models (LLMs) prompts.
+Built using Swift, Firebase (Firestore/Auth), and Core ML; leveraged Firebase Cloud Functions for AI model serving and 
+
+
+ShivShares- AI Education Program							December 2024 - January 2025
+Taught over 30 students from local middle schools, using interactive projects to explain AI concepts such as image recognition, pattern detection, and decision-making.
+Guided students through hands-on activities using tools like Teachable Machine and Scratch with AI extensions, building mini-projects such as emotion classifiers and voice-based games.
+Introduced Python fundamentals and connected them to real-world AI use cases (e.g., chatbots, recommendation systems).
+Designed lessons to make AI approachable and ethical, encouraging critical thinking about how AI is used in society
+
+ALSpeak- App For ALS                          						              September 2024 - December 2024
+Developed a mobile application that helps ALS patients communicate more easily using pre-determined phrases in set dictionaries 
+Features include customizable dictionaries based on environments/situations such as “Formal”, “Casual”, “Dinner Settings”, “Football Game”, and more
+Won the “Best Business Overall” Award during Convergent Demo Day by a panel consisting of professors, startup founders, and alumni 
+Built using Swift, Firebase, and JavaScript
+
+
+add these as well:
+
+Languages: Python, Java, TypeScript, JavaScript, SQL
+AI/ML Frameworks & Libraries: TensorFlow, PyTorch, Pandas, NumPy, OpenCV, Onyx, TensorRT
+Web & App Development: React, Node.js, Spring Boot, Flask, Jupyter Notebooks
+Tools & Platforms: AWS, Firebase, Postman, Git, Oracle SQL Developer, Oracle Database, Linux, Docker
+Other Skills: Git, Figma, Tableau, Power BI, Excel, PowerPoint, Google Workspaces, JIRA, Agile
+
+
+and then work experience:
+
+WORK EXPERIENCE													
+Bridge Health – Software Engineer Intern; Remote					                         March 2025 –  August 2025
+Created user classes in Spring Boot to achieve core sign-up and log-in functionality
+Configured Spring Boot to sync data in real-time with AWS RDS Postgres and DBeaver, which increased retrieval speed by 63%
+Tested compatibility with Postman and built crucial front-end components such as the Navigation Bar 
+Texas Convergent– Software Engineer Intern; Austin, Texas					      August 2024 – December 2024
+Collaborated with cross-functional teams to design and develop full-stack applications using technologies such as React, Firebase, and Flask.
+Contributed to feature development, bug fixes, and deployment of scalable web/mobile apps as part of a student-led tech incubator.
+Mentored students through workshops by creating and teaching introductory computer science content in Python and Java.
+Cirrus Nexus – AI/ML Intern; Remote 						                              May 2024 – August 2024
+Designed an interactive digital map visualizing over 250 global data centers and their carbon emissions, integrating real-time data to track environmental impact.
+Leveraged data analysis techniques to identify high greenhouse gas emission patterns across 22 companies, supporting recommendations for optimizing operations toward sustainable practices.
+Developed RESTful APIs to power a dynamic currency exchange rate dashboard, improving financial analytics and enabling real-time cost calculations for international clients.
+Applied basic machine learning models to forecast carbon usage trends and inform decision-making for sustainability initiatives.
+
+this as well:
+
+The University of Texas at Austin
+Major: Computer Science & Economics B.S
+Minor: Statistics and Data Science
+Relevant Coursework: Data Structures, Algorithms, Statistics, Risk Management, Elements of Computers and Programming, Elements of Data Science
+
+
+add a creative button for LinkedIn github and gmail
+
+a tab for my resume
+
+and a navigation bar on the top or the side taking you to each part of my portfolio website
+
+do an about me that says something along the lines I am a software engineer and product manager 
+
+and then a place to put a picture of me next to the about me
