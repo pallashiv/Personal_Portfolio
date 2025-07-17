@@ -5,40 +5,31 @@ const experiences = [
   {
     id: 1,
     title: "Software Engineer Intern",
-    company: "Bridge Health",
+    company: "@Bridge Health",
     period: "March 2025 – August 2025",
-    location: "Remote",
+    location: "",
     color: "bg-blue-500",
     achievements: [
-      "Created user classes in Spring Boot for core authentication functionality",
-      "Configured real-time data sync with AWS RDS Postgres, increasing retrieval speed by 63%",
-      "Built crucial front-end components and tested compatibility with Postman"
     ]
   },
   {
     id: 2,
     title: "Software Engineer Intern",
-    company: "Texas Convergent",
+    company: "@Texas Convergent",
     period: "August 2024 – December 2024",
-    location: "Austin, Texas",
+    location: "",
     color: "bg-purple-500",
     achievements: [
-      "Collaborated with cross-functional teams on full-stack applications",
-      "Contributed to feature development and deployment of scalable web/mobile apps",
-      "Mentored students through workshops in Python and Java"
     ]
   },
   {
     id: 3,
     title: "AI/ML Intern",
-    company: "Cirrus Nexus",
+    company: "@Cirrus Nexus",
     period: "May 2024 – August 2024",
-    location: "Remote",
+    location: "",
     color: "bg-cyan-500",
     achievements: [
-      "Designed interactive digital map visualizing 250+ global data centers",
-      "Applied ML models to forecast carbon usage trends for sustainability",
-      "Developed RESTful APIs for dynamic currency exchange dashboard"
     ]
   }
 ];

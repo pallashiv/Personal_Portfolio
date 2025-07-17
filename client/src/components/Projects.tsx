@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ShoppingCart, MessageCircle, GraduationCap, ExternalLink } from "lucide-react";
+import { ShoppingCart, MessageCircle, GraduationCap, ExternalLink, BrainCircuit } from "lucide-react";
 
 const projects = [
   {
@@ -33,7 +33,18 @@ const projects = [
     icon: GraduationCap,
     gradient: "from-cyan-500 to-blue-500",
     borderColor: "hover:border-cyan-500/50"
+  },
+  {
+    id: 3,
+    title: "Time-Code Analysis With Motion Code",
+    period: "May 2025 - Current",
+    description: "This project analyzes time-synchronized motion data—like gait, gestures, or physical activity—using computer vision and AI techniques. It converts motion into interpretable motion code, which is a structured representation of patterns over time.",
+    technologies: ["Motion Capture", "Time-Series Modeling", "AI/ML", "TimesNet", "Jupyter Notebooks"],
+    icon: BrainCircuit,
+    gradient: "from-cyan-500 to-blue-500",
+    borderColor: "hover:border-cyan-500/50"
   }
+  
 ];
 
 const techColors: Record<string, string> = {
@@ -43,7 +54,11 @@ const techColors: Record<string, string> = {
   "JavaScript": "bg-yellow-500/20 text-yellow-400",
   "Python": "bg-green-500/20 text-green-400",
   "Scratch": "bg-orange-500/20 text-orange-400",
-  "AI/ML": "bg-pink-500/20 text-pink-400"
+  "AI/ML": "bg-pink-500/20 text-pink-400",
+  "TimesNet": "bg-indigo-500/20 text-indigo-400",
+  "Motion Capture": "bg-rose-500/20 text-rose-400",
+  "Time-Series Modeling": "bg-lime-500/20 text-lime-400",
+  "Jupyter Notebooks": "bg-teal-500/20 text-teal-400"
 };
 
 export default function Projects() {
@@ -96,13 +111,6 @@ export default function Projects() {
                         </span>
                       ))}
                     </div>
-                    
-                    <Button 
-                      variant="ghost" 
-                      className="text-blue-400 hover:text-purple-400 transition-colors p-0 h-auto"
-                    >
-                      Learn More <ExternalLink className="ml-2 h-4 w-4" />
-                    </Button>
                   </CardContent>
                 </Card>
               </motion.div>

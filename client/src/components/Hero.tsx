@@ -27,8 +27,10 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <span className="tech-gradient-text">Software Engineer</span>
+              <span className="tech-gradient-text">Hi there, I'm Shivsagar Palla!</span>
+
             </motion.h1>
+            
             
             <motion.p 
               className="text-xl text-slate-300 mb-8 leading-relaxed"
@@ -37,7 +39,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               Passionate about building innovative solutions that bridge technology and user experience. 
-              Experienced in full-stack development, AI/ML integration, and creating impactful applications.
+              Curious about full-stack development, AI/ML integration, and creating impactful applications that change the world!
             </motion.p>
             
             <motion.div 
@@ -54,13 +56,16 @@ export default function Hero() {
                 View My Work
               </Button>
               <Button
-                variant="outline"
-                size="lg"
-                className="px-8 py-4 border-slate-600 rounded-full font-semibold hover:bg-slate-800 transition-all duration-300"
-                onClick={() => scrollToSection("resume")}
-              >
-                Download Resume
-              </Button>
+  asChild
+  variant="outline"
+  size="lg"
+  className="px-8 py-4 border-slate-600 rounded-full font-semibold hover:bg-slate-800 transition-all duration-300"
+>
+  <a href="/shivpalla.resume.pdf" target="_blank" rel="noopener noreferrer">
+    Check out my CV!
+  </a>
+</Button>
+
             </motion.div>
           </motion.div>
           
@@ -82,8 +87,12 @@ export default function Hero() {
                   ease: "easeInOut"
                 }}
               >
-                <div className="w-72 h-72 rounded-full bg-slate-700/50 backdrop-blur-sm border-2 border-blue-500/30 flex items-center justify-center">
-                  <span className="text-6xl font-bold tech-gradient-text">SW</span>
+                <div className="w-72 h-72 rounded-full bg-slate-700/50 backdrop-blur-sm border-2 border-blue-500/30 flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/_MG_9654.jpeg"
+                    alt="Shivsagar Palla"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </motion.div>
               <motion.div 

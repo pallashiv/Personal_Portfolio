@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Sidebar from "@/components/Sidebar";
+import TopNav from "@/components/TopNav";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
@@ -10,7 +10,6 @@ import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Portfolio() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
@@ -42,38 +41,17 @@ export default function Portfolio() {
     };
   }, []);
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setSidebarOpen(false);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-slate-900 text-white overflow-x-hidden">
-      {/* Mobile Menu Button */}
-      <Button
-        variant="outline"
-        size="sm"
-        className="fixed top-4 left-4 z-50 lg:hidden bg-slate-800/80 backdrop-blur-sm border-slate-700 hover:bg-slate-700"
-        onClick={() => setSidebarOpen(!sidebarOpen)}
-      >
-        <Menu className="h-4 w-4" />
-      </Button>
-
-      {/* Sidebar */}
-      <Sidebar 
-        isOpen={sidebarOpen} 
-        onClose={() => setSidebarOpen(false)}
-        activeSection={activeSection}
-      />
-
-      {/* Main Content */}
-      <main className="lg:ml-64 min-h-screen">
+      <TopNav activeSection={activeSection} onNavigate={scrollToSection} />
+      <main className="pt-16">
         <Hero />
         <Projects />
         <Skills />
@@ -81,14 +59,6 @@ export default function Portfolio() {
         <Education />
         <Resume />
       </main>
-
-      {/* Mobile Overlay */}
-      {sidebarOpen && (
-        <div 
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
-          onClick={() => setSidebarOpen(false)}
-        />
-      )}
     </div>
   );
 }

@@ -22,19 +22,19 @@ const socialLinks = [
     icon: Linkedin, 
     label: "LinkedIn", 
     href: "https://linkedin.com", 
-    gradient: "from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800" 
+    gradient: "from-purple-600 to-blue-700 hover:from-blue-700 hover:to-blue-800" 
   },
   { 
     icon: Github, 
     label: "GitHub", 
     href: "https://github.com", 
-    gradient: "from-gray-700 to-gray-800 hover:from-gray-800 hover:to-gray-900" 
+    gradient: "from-purple-600 to-blue-700 hover:from-blue-700 hover:to-blue-800" 
   },
   { 
     icon: Mail, 
     label: "Email", 
     href: "mailto:example@email.com", 
-    gradient: "from-red-600 to-red-700 hover:from-red-700 hover:to-red-800" 
+    gradient: "from-purple-600 to-blue-700 hover:from-blue-700 hover:to-blue-800" 
   },
 ];
 
@@ -51,9 +51,10 @@ export default function Sidebar({ isOpen, onClose, activeSection }: SidebarProps
     <>
       <motion.nav
         initial={{ x: -256 }}
-        animate={{ x: isOpen ? 0 : -256 }}
+        animate={{ x: isOpen ? 0 : -288 }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        className="fixed left-0 top-0 h-full w-64 bg-slate-800/50 backdrop-blur-lg border-r border-slate-700/50 z-50 lg:translate-x-0"
+        className="fixed top-0 left-0 z-50 w-72 h-full bg-slate-800/80 backdrop-blur-sm border-slate-700 hover:bg-slate-700"
+
       >
         <div className="p-6">
           <div className="mb-8">

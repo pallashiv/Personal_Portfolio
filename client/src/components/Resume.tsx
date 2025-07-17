@@ -67,13 +67,16 @@ export default function Resume() {
                   viewport={{ once: true }}
                 >
                   <Button
-                    size="lg"
-                    className="px-8 py-4 tech-gradient rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
-                    onClick={handleDownload}
-                  >
-                    <Download className="mr-3 h-5 w-5" />
-                    Download PDF
-                  </Button>
+  asChild
+  size="lg"
+  className="px-8 py-4 tech-gradient rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
+>
+  <a href="/shivpalla.resume.pdf" download>
+    <Download className="mr-3 h-5 w-5 inline" />
+    Download PDF
+  </a>
+</Button>
+
                 </motion.div>
               </CardContent>
             </Card>
