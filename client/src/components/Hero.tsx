@@ -41,7 +41,7 @@ export default function Hero() {
                 <ArrowRight className="h-4 w-4" />
               </button>
               <a
-                href="/Shivsagar_Palla_PM_Resume.pdf"
+                href={`${import.meta.env.BASE_URL}Shivsagar_Palla_PM_Resume.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm font-medium text-muted-foreground border-b border-transparent pb-0.5 hover:text-primary hover:border-primary transition-colors"
@@ -74,7 +74,7 @@ export default function Hero() {
           >
             <div className="w-full h-full border border-border overflow-hidden">
               <img
-                src="/shiv-palla-headshot.jpg"
+                src={`${import.meta.env.BASE_URL}shiv-palla-headshot.jpg`}
                 alt="Shiv Palla"
                 className="w-full h-full object-cover"
               />

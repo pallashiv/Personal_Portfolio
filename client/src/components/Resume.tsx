@@ -30,7 +30,7 @@ export default function Resume() {
           </div>
 
           <a
-            href="/Shivsagar_Palla_PM_Resume.pdf"
+            href={`${import.meta.env.BASE_URL}Shivsagar_Palla_PM_Resume.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-medium border-b border-foreground pb-0.5 hover:border-primary hover:text-primary transition-colors shrink-0"
