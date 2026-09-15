@@ -6,8 +6,6 @@ import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import Resume from "@/components/Resume";
-import { Menu } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("hero");
@@ -49,9 +47,9 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <TopNav activeSection={activeSection} onNavigate={scrollToSection} />
-      <main className="pt-16">
+      <main className="pt-20">
         <Hero />
         <Projects />
         <Skills />

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { Mail, Phone, Linkedin, ArrowRight } from "lucide-react";
 
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -10,102 +10,73 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-cyan-500/20 animate-gradient bg-[length:400%_400%]" />
-      
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
-          <motion.div 
-            className="flex-1 text-center lg:text-left"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+    <section id="hero" className="py-20 md:py-28">
+      <div className="max-w-5xl mx-auto px-6">
+        <div className="flex flex-col-reverse md:flex-row md:items-end gap-10 md:gap-16">
+          <motion.div
+            className="flex-1"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           >
-            <motion.h1 
-              className="text-5xl lg:text-6xl font-bold mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <span className="tech-gradient-text">Hi there, I'm Shivsagar Palla!</span>
+            <p className="section-label mb-4">Product Manager &middot; Builder</p>
 
-            </motion.h1>
-            
-            
-            <motion.p 
-              className="text-xl text-slate-300 mb-8 leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              Passionate about building innovative solutions that bridge technology and user experience. 
-              Curious about full-stack development, AI/ML integration, and creating impactful applications that change the world!
-            </motion.p>
-            
-            <motion.div 
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <Button
-                size="lg"
-                className="px-8 py-4 tech-gradient rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
+            <h1 className="font-display text-5xl md:text-6xl leading-[1.05] mb-6">
+              Shiv Palla
+            </h1>
+
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mb-8">
+              Product-minded builder studying Computer Science & Data Science
+              (UX minor) at UT Austin. I turn ambiguous problems into shipped
+              features, partnering with engineering on requirements, specs,
+              and architecture for AI-driven products used by millions.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-6 mb-10">
+              <button
                 onClick={() => scrollToSection("projects")}
+                className="inline-flex items-center gap-2 text-sm font-medium border-b border-foreground pb-0.5 hover:border-primary hover:text-primary transition-colors"
               >
-                View My Work
-              </Button>
-              <Button
-  asChild
-  variant="outline"
-  size="lg"
-  className="px-8 py-4 border-slate-600 rounded-full font-semibold hover:bg-slate-800 transition-all duration-300"
->
-  <a href="/shivpalla.resume.pdf" target="_blank" rel="noopener noreferrer">
-    Check out my CV!
-  </a>
-</Button>
+                View my work
+                <ArrowRight className="h-4 w-4" />
+              </button>
+              <a
+                href="/Shivsagar_Palla_PM_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-muted-foreground border-b border-transparent pb-0.5 hover:text-primary hover:border-primary transition-colors"
+              >
+                Resume
+              </a>
+            </div>
 
-            </motion.div>
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
+              <a href="mailto:shivpalla@utexas.edu" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <Mail className="h-3.5 w-3.5" />
+                shivpalla@utexas.edu
+              </a>
+              <a href="tel:+13462338378" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <Phone className="h-3.5 w-3.5" />
+                (346) 233-8378
+              </a>
+              <a href="https://www.linkedin.com/in/shivpalla/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <Linkedin className="h-3.5 w-3.5" />
+                linkedin.com/in/shivpalla
+              </a>
+            </div>
           </motion.div>
-          
-          <motion.div 
-            className="flex-1 flex justify-center"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+
+          <motion.div
+            className="w-40 h-52 md:w-52 md:h-64 shrink-0 self-center md:self-end"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="relative">
-              <motion.div
-                className="w-80 h-80 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 flex items-center justify-center animate-float"
-                animate={{ 
-                  y: [0, -10, 0],
-                }}
-                transition={{ 
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
-                <div className="w-72 h-72 rounded-full bg-slate-700/50 backdrop-blur-sm border-2 border-blue-500/30 flex items-center justify-center overflow-hidden">
-                  <img
-                    src="/_MG_9654.jpeg"
-                    alt="Shivsagar Palla"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </motion.div>
-              <motion.div 
-                className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20"
-                animate={{ 
-                  scale: [1, 1.05, 1],
-                  opacity: [0.5, 0.3, 0.5]
-                }}
-                transition={{ 
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
+            <div className="w-full h-full border border-border overflow-hidden">
+              <img
+                src="/shiv-palla-headshot.jpg"
+                alt="Shiv Palla"
+                className="w-full h-full object-cover"
               />
             </div>
           </motion.div>

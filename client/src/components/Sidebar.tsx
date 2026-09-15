@@ -18,23 +18,23 @@ const navigationItems = [
 ];
 
 const socialLinks = [
-  { 
-    icon: Linkedin, 
-    label: "LinkedIn", 
-    href: "https://linkedin.com", 
-    gradient: "from-purple-600 to-blue-700 hover:from-blue-700 hover:to-blue-800" 
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/shivpalla/",
+    gradient: "from-purple-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
   },
-  { 
-    icon: Github, 
-    label: "GitHub", 
-    href: "https://github.com", 
-    gradient: "from-purple-600 to-blue-700 hover:from-blue-700 hover:to-blue-800" 
+  {
+    icon: Github,
+    label: "GitHub",
+    href: "https://github.com/pallashiv",
+    gradient: "from-purple-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
   },
-  { 
-    icon: Mail, 
-    label: "Email", 
-    href: "mailto:example@email.com", 
-    gradient: "from-purple-600 to-blue-700 hover:from-blue-700 hover:to-blue-800" 
+  {
+    icon: Mail,
+    label: "Email",
+    href: "mailto:shivpalla@utexas.edu",
+    gradient: "from-purple-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
   },
 ];
 

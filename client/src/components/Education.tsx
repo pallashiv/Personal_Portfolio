@@ -1,88 +1,67 @@
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
-import { GraduationCap } from "lucide-react";
 
 const coursework = [
   "Data Structures",
-  "Algorithms", 
+  "Algorithms",
   "Statistics",
+  "Elements of Data Science",
+  "Data Visualization",
+  "Mobile Computing",
   "Risk Management",
-  "Elements of Computers and Programming",
-  "Elements of Data Science"
+  "Economic Statistics",
+  "Macroeconomics"
 ];
 
 export default function Education() {
   return (
-    <section id="education" className="py-20">
-      <div className="container mx-auto px-6">
-        <motion.h2 
-          className="text-4xl font-bold text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
+    <section id="education" className="py-20 border-t border-border">
+      <div className="max-w-5xl mx-auto px-6">
+        <motion.p
+          className="section-label mb-3"
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <span className="tech-gradient-text">Education</span>
+          04 &mdash; Education
+        </motion.p>
+        <motion.h2
+          className="font-display text-3xl md:text-4xl mb-14"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.05 }}
+          viewport={{ once: true }}
+        >
+          Education
         </motion.h2>
-        
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <Card className="bg-slate-800/30 backdrop-blur-sm border-slate-700/50">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mr-6">
-                    <GraduationCap className="h-8 w-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white">The University of Texas at Austin</h3>
-                    <p className="text-slate-400">Bachelor of Science</p>
-                  </div>
-                </div>
-                
-                <div className="grid md:grid-cols-2 gap-6">
-                  <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    viewport={{ once: true }}
-                  >
-                    <h4 className="text-lg font-semibold text-blue-400 mb-2">Major</h4>
-                    <p className="text-slate-300 mb-4">Computer Science & Economics</p>
-                    <h4 className="text-lg font-semibold text-purple-400 mb-2">Minor</h4>
-                    <p className="text-slate-300">Statistics and Data Science</p>
-                  </motion.div>
-                  
-                  <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    viewport={{ once: true }}
-                  >
-                    <h4 className="text-lg font-semibold text-cyan-400 mb-2">Relevant Coursework</h4>
-                    <ul className="text-slate-300 space-y-1">
-                      {coursework.map((course, index) => (
-                        <motion.li
-                          key={course}
-                          initial={{ opacity: 0, x: 20 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-                          viewport={{ once: true }}
-                        >
-                          • {course}
-                        </motion.li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-6">
+            <h3 className="font-display text-2xl">The University of Texas at Austin</h3>
+            <span className="text-sm text-muted-foreground shrink-0">Expected May 2028</span>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-10">
+            <div>
+              <h4 className="text-sm font-medium uppercase tracking-wide text-foreground mb-2 pb-2 border-b border-border">Major</h4>
+              <p className="text-muted-foreground mb-6">Computer Science & Data Science, B.S.</p>
+              <h4 className="text-sm font-medium uppercase tracking-wide text-foreground mb-2 pb-2 border-b border-border">Minor</h4>
+              <p className="text-muted-foreground">Informatics - UX</p>
+            </div>
+
+            <div>
+              <h4 className="text-sm font-medium uppercase tracking-wide text-foreground mb-2 pb-2 border-b border-border">Relevant Coursework</h4>
+              <p className="text-muted-foreground leading-relaxed">
+                {coursework.join(" · ")}
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

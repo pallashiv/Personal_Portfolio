@@ -3,59 +3,26 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(222, 84%, 5%);
-  --foreground: hsl(210, 40%, 98%);
-  --muted: hsl(217, 32%, 17%);
-  --muted-foreground: hsl(215, 20%, 65%);
-  --popover: hsl(222, 84%, 5%);
-  --popover-foreground: hsl(210, 40%, 98%);
-  --card: hsl(222, 84%, 5%);
-  --card-foreground: hsl(210, 40%, 98%);
-  --border: hsl(217, 32%, 17%);
-  --input: hsl(217, 32%, 17%);
-  --primary: hsl(217, 91%, 60%);
-  --primary-foreground: hsl(210, 40%, 98%);
-  --secondary: hsl(217, 32%, 17%);
-  --secondary-foreground: hsl(210, 40%, 98%);
-  --accent: hsl(217, 32%, 17%);
-  --accent-foreground: hsl(210, 40%, 98%);
-  --destructive: hsl(0, 62%, 30%);
-  --destructive-foreground: hsl(210, 40%, 98%);
-  --ring: hsl(217, 91%, 60%);
-  --radius: 0.5rem;
-  
-  /* Custom tech theme colors */
-  --tech-blue: hsl(217, 91%, 60%);
-  --tech-purple: hsl(262, 83%, 58%);
-  --tech-cyan: hsl(189, 94%, 43%);
-  --slate-900: hsl(222, 84%, 5%);
-  --slate-800: hsl(215, 28%, 17%);
-  --slate-700: hsl(215, 20%, 25%);
-  --slate-600: hsl(215, 14%, 34%);
-  --slate-400: hsl(215, 20%, 65%);
-  --slate-300: hsl(212, 23%, 69%);
-}
-
-.dark {
-  --background: hsl(222, 84%, 5%);
-  --foreground: hsl(210, 40%, 98%);
-  --muted: hsl(217, 32%, 17%);
-  --muted-foreground: hsl(215, 20%, 65%);
-  --popover: hsl(222, 84%, 5%);
-  --popover-foreground: hsl(210, 40%, 98%);
-  --card: hsl(222, 84%, 5%);
-  --card-foreground: hsl(210, 40%, 98%);
-  --border: hsl(217, 32%, 17%);
-  --input: hsl(217, 32%, 17%);
-  --primary: hsl(217, 91%, 60%);
-  --primary-foreground: hsl(210, 40%, 98%);
-  --secondary: hsl(217, 32%, 17%);
-  --secondary-foreground: hsl(210, 40%, 98%);
-  --accent: hsl(217, 32%, 17%);
-  --accent-foreground: hsl(210, 40%, 98%);
-  --destructive: hsl(0, 62%, 30%);
-  --destructive-foreground: hsl(210, 40%, 98%);
-  --ring: hsl(217, 91%, 60%);
+  --background: hsl(40, 20%, 97%);
+  --foreground: hsl(20, 14%, 10%);
+  --muted: hsl(40, 12%, 92%);
+  --muted-foreground: hsl(30, 6%, 42%);
+  --popover: hsl(40, 20%, 97%);
+  --popover-foreground: hsl(20, 14%, 10%);
+  --card: hsl(40, 20%, 97%);
+  --card-foreground: hsl(20, 14%, 10%);
+  --border: hsl(30, 10%, 85%);
+  --input: hsl(30, 10%, 85%);
+  --primary: hsl(9, 57%, 40%);
+  --primary-foreground: hsl(40, 20%, 97%);
+  --secondary: hsl(40, 12%, 92%);
+  --secondary-foreground: hsl(20, 14%, 10%);
+  --accent: hsl(9, 57%, 40%);
+  --accent-foreground: hsl(40, 20%, 97%);
+  --destructive: hsl(0, 62%, 40%);
+  --destructive-foreground: hsl(40, 20%, 97%);
+  --ring: hsl(9, 57%, 40%);
+  --radius: 0.25rem;
 }
 
 @layer base {
@@ -65,8 +32,6 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
-    background: hsl(222, 84%, 5%);
-    color: hsl(210, 40%, 98%);
   }
 
   html {
@@ -75,74 +40,30 @@
 }
 
 @layer utilities {
-  .tech-gradient {
-    background: linear-gradient(135deg, var(--tech-blue), var(--tech-purple));
+  .font-display {
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
   }
-  
-  .tech-gradient-text {
-    background: linear-gradient(135deg, var(--tech-blue), var(--tech-purple));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .animate-gradient {
-    background-size: 400% 400%;
-    animation: gradient 6s ease infinite;
-  }
-  
-  .animate-float {
-    animation: float 3s ease-in-out infinite;
-  }
-  
-  .animate-slide-in {
-    animation: slideIn 0.5s ease-out;
+
+  .section-label {
+    @apply font-sans text-xs font-medium uppercase tracking-[0.2em] text-primary;
   }
 }
 
-@keyframes gradient {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Custom scrollbar */
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(217, 32%, 17%);
+  background: hsl(40, 12%, 92%);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(217, 91%, 60%);
+  background: hsl(30, 8%, 70%);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(262, 83%, 58%);
+  background: hsl(9, 57%, 40%);
 }

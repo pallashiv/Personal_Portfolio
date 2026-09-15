@@ -1,103 +1,68 @@
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
-import { Code, Brain, Laptop, Wrench, Palette } from "lucide-react";
 
 const skillCategories = [
   {
     id: 1,
     title: "Languages",
-    icon: Code,
-    color: "text-blue-400",
-    skills: ["Python", "Java", "TypeScript", "JavaScript", "SQL"],
-    borderColor: "hover:border-blue-400/30"
+    skills: ["Python", "Java", "JavaScript/TypeScript"]
   },
   {
     id: 2,
-    title: "AI/ML Frameworks",
-    icon: Brain,
-    color: "text-purple-400",
-    skills: ["TensorFlow", "PyTorch", "Pandas", "NumPy", "OpenCV"],
-    borderColor: "hover:border-purple-400/30"
+    title: "Product Skills",
+    skills: ["Roadmapping", "Prioritization Frameworks (RICE, MoSCoW)", "Technical Requirements Definition", "Sprint Planning", "PRD/Spec Writing", "Competitive Analysis", "A/B Testing"]
   },
   {
     id: 3,
-    title: "Web & App Dev",
-    icon: Laptop,
-    color: "text-cyan-400",
-    skills: ["React", "Node.js", "Spring Boot", "Flask", "Jupyter"],
-    borderColor: "hover:border-cyan-400/30"
+    title: "User Research & Analytics",
+    skills: ["User Research", "Stakeholder Management", "Data Analysis", "KPI/OKR Tracking", "Amplitude", "Mixpanel"]
   },
   {
     id: 4,
-    title: "Tools & Platforms",
-    icon: Wrench,
-    color: "text-blue-400",
-    skills: ["AWS", "Firebase", "Docker", "Git", "Linux"],
-    borderColor: "hover:border-blue-400/30"
-  },
-  {
-    id: 5,
-    title: "Design & Tools",
-    icon: Palette,
-    color: "text-purple-400",
-    skills: ["Figma", "Tableau", "Power BI", "JIRA", "Agile"],
-    borderColor: "hover:border-purple-400/30"
+    title: "Technical Fluency",
+    skills: ["REST APIs", "Microservices", "Distributed Systems", "Cloud Platforms", "Agile/Scrum", "CAP Theorem", "Load Balancing"]
   }
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20">
-      <div className="container mx-auto px-6">
-        <motion.h2 
-          className="text-4xl font-bold text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
+    <section id="skills" className="py-20 border-t border-border">
+      <div className="max-w-5xl mx-auto px-6">
+        <motion.p
+          className="section-label mb-3"
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <span className="tech-gradient-text">Technical Skills</span>
+          02 &mdash; Skills
+        </motion.p>
+        <motion.h2
+          className="font-display text-3xl md:text-4xl mb-14"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.05 }}
+          viewport={{ once: true }}
+        >
+          Skills & certifications
         </motion.h2>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skillCategories.map((category, index) => {
-            const Icon = category.icon;
-            return (
-              <motion.div
-                key={category.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-              >
-                <Card className={`bg-slate-800/30 backdrop-blur-sm border-slate-700/50 ${category.borderColor} transition-all duration-300 h-full`}>
-                  <CardContent className="p-6">
-                    <div className="flex items-center mb-4">
-                      <Icon className={`${category.color} text-2xl mr-3`} />
-                      <h3 className="text-xl font-bold">{category.title}</h3>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      {category.skills.map((skill, skillIndex) => (
-                        <motion.div
-                          key={skill}
-                          className="p-2 bg-slate-700/30 rounded-lg text-slate-300"
-                          initial={{ opacity: 0, x: -20 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.4, delay: skillIndex * 0.1 }}
-                          viewport={{ once: true }}
-                          whileHover={{ scale: 1.02, backgroundColor: "rgba(71, 85, 105, 0.4)" }}
-                        >
-                          {skill}
-                        </motion.div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            );
-          })}
+
+        <div className="grid sm:grid-cols-2 gap-x-10 gap-y-12">
+          {skillCategories.map((category, index) => (
+            <motion.div
+              key={category.id}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-sm font-medium uppercase tracking-wide text-foreground mb-4 pb-2 border-b border-border">
+                {category.title}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                {category.skills.join(" · ")}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

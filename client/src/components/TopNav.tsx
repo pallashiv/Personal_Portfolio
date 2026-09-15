@@ -1,4 +1,4 @@
-import { Home, Code, Settings, Briefcase, GraduationCap, FileText, Linkedin, Github, Mail } from "lucide-react";
+import { Linkedin, Github, Mail } from "lucide-react";
 
 interface TopNavProps {
   activeSection: string;
@@ -6,19 +6,19 @@ interface TopNavProps {
 }
 
 const navigationItems = [
-  { id: "hero", label: "Home", icon: Home },
-  { id: "projects", label: "Projects", icon: Code },
-  { id: "skills", label: "Skills", icon: Settings },
-  { id: "experience", label: "Experience", icon: Briefcase },
-  { id: "education", label: "Education", icon: GraduationCap },
-  { id: "resume", label: "Resume", icon: FileText },
+  { id: "hero", label: "Home" },
+  { id: "projects", label: "Projects" },
+  { id: "skills", label: "Skills" },
+  { id: "experience", label: "Experience" },
+  { id: "education", label: "Education" },
+  { id: "resume", label: "Resume" },
 ];
 
 const socialLinks = [
   {
     icon: Mail,
-    label: "Gmail",
-    href: "mailto:pallashivsagar@gmail.com",
+    label: "Email",
+    href: "mailto:shivpalla@utexas.edu",
   },
   {
     icon: Linkedin,
@@ -34,30 +34,36 @@ const socialLinks = [
 
 export default function TopNav({ activeSection, onNavigate }: TopNavProps) {
   return (
-    <nav className="fixed top-0 left-0 w-full bg-slate-800/80 backdrop-blur-lg z-50 border-b border-slate-700">
-      <div className="flex justify-between items-center max-w-7xl mx-auto px-4">
-        <ul className="flex space-x-6 py-3">
+    <nav className="fixed top-0 left-0 w-full bg-background/95 backdrop-blur-sm z-50 border-b border-border">
+      <div className="flex justify-between items-center max-w-5xl mx-auto px-6 h-20">
+        <button
+          className="font-display text-xl tracking-tight"
+          onClick={() => onNavigate("hero")}
+        >
+          Shiv Palla
+        </button>
+
+        <ul className="flex items-center gap-5 md:gap-8 overflow-x-auto">
           {navigationItems.map((item) => {
-            const Icon = item.icon;
             const isActive = activeSection === item.id;
             return (
-              <li key={item.id}>
+              <li key={item.id} className="shrink-0">
                 <button
-                  className={`flex items-center px-4 py-2 rounded transition-all duration-200 ${
+                  className={`text-sm py-1 border-b transition-colors whitespace-nowrap ${
                     isActive
-                      ? "bg-slate-700 text-cyan-400"
-                      : "text-slate-200 hover:bg-slate-700/50"
+                      ? "text-foreground border-primary"
+                      : "text-muted-foreground border-transparent hover:text-foreground"
                   }`}
                   onClick={() => onNavigate(item.id)}
                 >
-                  <Icon className="mr-2 h-5 w-5" />
-                  <span>{item.label}</span>
+                  {item.label}
                 </button>
               </li>
             );
           })}
         </ul>
-        <div className="flex space-x-4">
+
+        <div className="flex items-center gap-4">
           {socialLinks.map((social) => {
             const Icon = social.icon;
             return (
@@ -67,9 +73,9 @@ export default function TopNav({ activeSection, onNavigate }: TopNavProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.label}
-                className="text-slate-200 hover:text-cyan-400 transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors"
               >
-                <Icon className="h-5 w-5" />
+                <Icon className="h-[18px] w-[18px]" />
               </a>
             );
           })}
@@ -77,4 +83,4 @@ export default function TopNav({ activeSection, onNavigate }: TopNavProps) {
       </div>
     </nav>
   );
-} 
+}
