@@ -10,6 +10,7 @@ const navigationItems = [
   { id: "projects", label: "Projects" },
   { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
+  { id: "leadership", label: "Leadership" },
   { id: "education", label: "Education" },
   { id: "resume", label: "Resume" },
 ];

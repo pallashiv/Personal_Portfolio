@@ -23,7 +23,7 @@ export default function Education() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          04 &mdash; Education
+          05 &mdash; Education
         </motion.p>
         <motion.h2
           className="font-display text-3xl md:text-4xl mb-14"

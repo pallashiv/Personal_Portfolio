@@ -3,38 +3,47 @@ import { motion } from "framer-motion";
 const experiences = [
   {
     id: 1,
-    title: "Product Management Intern",
+    title: "Technical Product Management Intern",
     company: "IBM",
     period: "May 2026 – August 2026",
     location: "Austin, Texas",
     achievements: [
-      "Owned end-to-end requirements for \"AI Daily Brief,\" a chat-first AI system replacing IBM Maximo's static dashboard, partnering directly with engineering on architecture and API design for an MVP touching millions of industrial maintenance decisions",
-      "Drove a proactive, iteration-first approach to scope, establishing a strict 3-item attention cap that cut on-screen decision load versus the legacy 15+ widget dashboard under a tight delivery timeline",
-      "Authored a technical/product spec (30+ conversational intents, component architecture, 16-step verification script) that engineering built directly against, keeping design and engineering aligned through a fast-moving MVP cycle"
+      "Owned product design for \"AI Daily Brief,\" a chat-first AI homepage replacing IBM Maximo's static ops dashboard; one of two flagship prototypes presented in leadership review meetings and re-iterated based on that feedback",
+      "Built an MCP server in TypeScript/Node.js exposing Maximo data as agent tools, with a conversational inspection UI where field technicians photo-capture an issue, describe it in natural language, and an AI agent autonomously creates the work order and executes downstream Maximo actions",
+      "Designed a dynamic briefing model where an AI agent, pulling live Maximo data through an MCP server, surfaced only the cards a user needed that day, scaling with emergencies, resources, and role tasks",
+      "Documented the product spec (30+ conversational intents, component architecture, 16-step QA verification script) that let engineering build with minimal back-and-forth, keeping the MVP on schedule for demo day"
     ]
   },
   {
     id: 2,
-    title: "AI Venture Agent Developer",
+    title: "Technical Product Management Intern",
     company: "Tata Communications",
     period: "January 2026 – May 2026",
     location: "Remote",
     achievements: [
-      "Partnered with engineering to build and ship an AI-driven deal-sourcing agent, translating business criteria into evaluation logic against a data pipeline covering 1,000+ firms and increasing pipeline coverage ~3x",
-      "Designed and iterated on a strategic-fit evaluation framework across telecom, cloud, and digital infrastructure sectors, improving recommendation accuracy ~35% and cutting evaluation time from hours to minutes",
-      "Presented findings to cross-functional venture and corporate strategy stakeholders, directly informing go/no-go calls on infrastructure and cloud partnership targets"
+      "Built the evaluation logic behind an AI deal sourcing agent with engineering, translating investment criteria into a scoring framework that took the team from manually reviewing 20-25 firms a week to screening 100-150, a ~3x lift in pipeline coverage across 1,000+ firms",
+      "Analyzed telecom, cloud, and digital infrastructure targets to refine that scoring criteria, lifting recommendation accuracy ~35% and cutting manual research time by ~60%"
     ]
   },
   {
     id: 3,
-    title: "Product Intern",
-    company: "Thrive Education",
+    title: "Data Annotator (Computer Vision / AI Training Data)",
+    company: "Mercor",
+    period: "September 2025 – December 2025",
+    location: "Remote",
+    achievements: [
+      "Labeled and annotated large-scale image datasets per detailed guidelines to produce high-quality ground-truth data for computer vision and ML model training, maintaining accuracy and consistency through QA checks"
+    ]
+  },
+  {
+    id: 4,
+    title: "AI Product Management Intern",
+    company: "Cirrus Nexus",
     period: "January 2025 – May 2025",
     location: "Remote",
     achievements: [
-      "Owned the product roadmap for an AI-powered platform serving 1,000+ users, working closely with engineering and clinical stakeholders to prioritize features against a recurring revenue model",
-      "Led design of provider-facing dashboards supporting a new recurring billing stream, working directly with engineers on data flows between provider and patient-facing systems",
-      "Analyzed adoption and engagement data to iterate on features quickly, increasing retention by ~20% while maintaining strict data compliance standards"
+      "Built a map visualizing carbon emissions across data centers by region, with alerts triggering when levels crossed a threshold, for a platform used by 22+ enterprise clients",
+      "Scoped an API-driven currency exchange module for multi-currency cost reports, replacing manual conversion by the finance/ops team and cutting errors in client billing"
     ]
   }
 ];

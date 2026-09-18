@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
+import Leadership from "@/components/Leadership";
 import Education from "@/components/Education";
 import Resume from "@/components/Resume";
 
@@ -11,7 +12,7 @@ export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
-    const sections = ["hero", "projects", "skills", "experience", "education", "resume"];
+    const sections = ["hero", "projects", "skills", "experience", "leadership", "education", "resume"];
     
     const observerOptions = {
       threshold: 0.3,
@@ -54,6 +55,7 @@ export default function Portfolio() {
         <Projects />
         <Skills />
         <Experience />
+        <Leadership />
         <Education />
         <Resume />
       </main>

@@ -12,7 +12,7 @@ export default function Resume() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          05 &mdash; Resume
+          06 &mdash; Resume
         </motion.p>
 
         <motion.div
