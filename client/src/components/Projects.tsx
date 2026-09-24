@@ -1,12 +1,25 @@
 import { motion } from "framer-motion";
 
-const projects = [
+type Project = {
+  id: number;
+  title: string;
+  period: string;
+  description: string;
+  technologies: string[];
+  links?: { label: string; url: string }[];
+};
+
+const projects: Project[] = [
   {
     id: 1,
-    title: "AI-Driven Heatwave Alert & Resilience Optimization",
-    period: "May 2025 – Dec 2025",
-    description: "Research project defining requirements for a real-time decision-support system that optimizes heatwave alert routing and response latency, turning stochastic modeling and distributed data pipeline outputs into actionable interventions for 100,000+ at-risk Texas residents. Prioritized 5+ resilience strategies projected to cut response latency 20-30% versus legacy alert infrastructure.",
-    technologies: ["Stochastic Modeling", "Data Pipelines", "Product Strategy"]
+    title: "mcpscan",
+    period: "Sep 2026",
+    description: "Open-source static security scanner for MCP (Model Context Protocol) servers — the connectors that let AI assistants call external tools. Built 17 detection rules for tool poisoning, hardcoded secrets, and \"rug-pull\" attacks where a trusted server rewrites a tool's behavior after approval, tuning them against 8 real, published servers to cut false positives from 49 down to a handful. Ships as a zero-dependency CLI, an interactive HTML report, and a GitHub Action with code-scanning integration.",
+    technologies: ["Python", "Security Tooling", "CI/CD"],
+    links: [
+      { label: "Live demo", url: "https://pallashiv.github.io/mcpscan/" },
+      { label: "GitHub", url: "https://github.com/pallashiv/mcpscan" }
+    ]
   },
   {
     id: 2,
@@ -66,7 +79,7 @@ export default function Projects() {
                 {project.description}
               </p>
 
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
@@ -74,6 +87,17 @@ export default function Projects() {
                   >
                     {tech}
                   </span>
+                ))}
+                {project.links?.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-medium text-primary hover:underline underline-offset-4 px-2.5 py-1"
+                  >
+                    {link.label} &rarr;
+                  </a>
                 ))}
               </div>
             </motion.div>
