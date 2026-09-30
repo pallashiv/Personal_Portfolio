@@ -12,7 +12,7 @@ type Project = {
 const projects: Project[] = [
   {
     id: 1,
-    title: "mcpscan",
+    title: "Mcpscan",
     period: "Sep 2026",
     description: "Open-source static security scanner for MCP (Model Context Protocol) servers — the connectors that let AI assistants call external tools. Built 17 detection rules for tool poisoning, hardcoded secrets, and \"rug-pull\" attacks where a trusted server rewrites a tool's behavior after approval, tuning them against 8 real, published servers to cut false positives from 49 down to a handful. Ships as a zero-dependency CLI, an interactive HTML report, and a GitHub Action with code-scanning integration.",
     technologies: ["Python", "Security Tooling", "CI/CD"],
@@ -31,9 +31,13 @@ const projects: Project[] = [
   {
     id: 3,
     title: "Ethereum Blockchain – Crypto Wallet",
-    period: "Jun 2025 – Aug 2025",
-    description: "Defined requirements for a decentralized wallet app, scoping core flows like sending/receiving ETH and transaction history against distributed-systems trust and security constraints. Partnered with engineering on MetaMask/Web3 authentication to cut onboarding to a single click, and evaluated smart contract risks to inform security requirements.",
-    technologies: ["Ethereum", "Web3", "MetaMask"]
+    period: "Sep 2026",
+    description: "Beginner-friendly, non-custodial Ethereum wallet on the Sepolia testnet, so new users can connect, receive, send, and verify a payment with no real money at risk. Wrote the PRD, user flows, and 6 architecture decision records, then built it end to end: one-click MetaMask connect with Sign-In with Ethereum and signed sessions, a send flow that catches bad addresses, ENS names, and insufficient funds before the wallet ever opens, and live transaction history that shows new sends instantly. Every error says in plain language whether any money moved.",
+    technologies: ["TypeScript", "Next.js", "Web3"],
+    links: [
+      { label: "Live demo", url: "https://ethereum-blockchain.vercel.app" },
+      { label: "GitHub", url: "https://github.com/pallashiv/EthereumBlockchain" }
+    ]
   }
 ];
 
