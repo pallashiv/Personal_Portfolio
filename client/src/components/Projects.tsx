@@ -26,7 +26,10 @@ const projects: Project[] = [
     title: "ALSpeak",
     period: "Sep 2025 – Dec 2025",
     description: "Assistive communication app for ALS patients. Led caregiver user research to scope a low-latency, phrase-based MVP with contextual dictionaries and real-time text-to-speech, and drove cross-functional delivery — awarded Best Overall Business at Convergent Demo Day.",
-    technologies: ["Product Strategy", "User Research", "Text-to-Speech"]
+    technologies: ["Product Strategy", "User Research", "Text-to-Speech"],
+    links: [
+      { label: "Live demo", url: "https://alspeak.vercel.app" }
+    ]
   },
   {
     id: 3,
