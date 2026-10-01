@@ -25,10 +25,11 @@ const projects: Project[] = [
     id: 2,
     title: "ALSpeak",
     period: "Sep 2025 – Dec 2025",
-    description: "Assistive communication app for ALS patients. Led caregiver user research to scope a low-latency, phrase-based MVP with contextual dictionaries and real-time text-to-speech, and drove cross-functional delivery — awarded Best Overall Business at Convergent Demo Day.",
-    technologies: ["Product Strategy", "User Research", "Text-to-Speech"],
+    description: "Assistive communication app for ALS patients. Led caregiver user research to scope a low-latency, phrase-based MVP with contextual dictionaries and real-time text-to-speech, and drove cross-functional delivery — awarded Best Overall Business at Convergent Demo Day. Then built the native iOS app end to end in SwiftUI: two-tap speech organized by place, a tremor-safe SOS button, hold and dwell selection for limited motor control, and fully offline voices including Personal Voice, verified by 145 automated tests with Apple accessibility audits.",
+    technologies: ["Product Strategy", "User Research", "SwiftUI", "Accessibility"],
     links: [
-      { label: "Live demo", url: "https://alspeak.vercel.app" }
+      { label: "Live demo", url: "https://alspeak.vercel.app" },
+      { label: "GitHub", url: "https://github.com/pallashiv/ALSpeak" }
     ]
   },
   {
